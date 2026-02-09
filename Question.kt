@@ -40,6 +40,28 @@ class Quiz :  ProgressPrintable {
         println()
         println(progressText)
 
+        fun printQuiz() {
+            question1.let {
+                println(it.questionText)
+                println(it.answer)
+                println(it.difficulty)
+            }
+            println()
+            question2.let {
+                println(it.questionText)
+                println(it.answer)
+                println(it.difficulty)
+            }
+            println()
+            question3.let {
+                println(it.questionText)
+                println(it.answer)
+                println(it.difficulty)
+            }
+            println()
+
+        }
+
     val question1 = Question<String>(
         questionText = "Речка спятила с ума - По домам пошла сама. ___",
         answer = "водопровод",
@@ -71,5 +93,8 @@ fun main() {
 //    println("${StudentProgress.answered} of ${StudentProgress.total} answered.")
 //    println("${Quiz.answered} of ${Quiz.total} answered.")
 //    println(Quiz.progressText)
-    Quiz.printProgressBar()
+//    Quiz.printProgressBar()
+//    val quiz = Quiz()
+//    quiz.printQuiz()
+    Quiz().apply {printQuiz()}
 }
